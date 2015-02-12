@@ -3,7 +3,7 @@
 var yeoman = require('yeoman-generator'),
     yosay = require('yosay');
 
-var FrancisWordpressGenerator = yeoman.generators.Base.extend({
+var FrancispyroGenerator = yeoman.generators.Base.extend({
   init: function() {
     this.pkg = require('../package.json');
   },
@@ -11,7 +11,7 @@ var FrancisWordpressGenerator = yeoman.generators.Base.extend({
   promptTask: function() {
     var done = this.async();
 
-    this.log(yosay('You\'re using Francis Bond\'s fantastic Wordpress generator.'));
+    this.log(yosay('You\'re using Francis Bond\'s fantastic Pyro generator.'));
 
     this.prompt([{
       name: 'slug',
@@ -24,7 +24,7 @@ var FrancisWordpressGenerator = yeoman.generators.Base.extend({
     {
       name: 'production',
       message: 'Enter the hostname of the dokku production server',
-      default: 'wp.francisbond.com'
+      default: 'craft.francisbond.com'
     }], function(props) {
       this.slug = props.slug;
       this.remoteStaging = props.staging;
@@ -68,7 +68,7 @@ var FrancisWordpressGenerator = yeoman.generators.Base.extend({
 
   public: function() {
     this.mkdir('public');
-    this.copy('wp-config-database.php', 'public/wp-config-database.php');
+    this.copy('database-config.php', 'public/database-config.php');
     this.write('public/.gitkeep', '');
 
     this.copy('htaccess', 'public/.htaccess');
@@ -79,4 +79,4 @@ var FrancisWordpressGenerator = yeoman.generators.Base.extend({
   }
 });
 
-module.exports = FrancisWordpressGenerator;
+module.exports = FrancisPyroGenerator;

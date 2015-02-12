@@ -7,7 +7,7 @@
 $project_name  = '<%= _.slugify(slug) %>'
 $range = (0..255).to_a
 $ip_address = '192.168.' + $range.sample.to_s + '.' + $range.sample.to_s
-$hostname = $project_name + '.wordpress.dev'
+$hostname = $project_name + '.pyro.dev'
 # ------------------------------------------------------------------------
 
 Vagrant.configure('2') do |config|

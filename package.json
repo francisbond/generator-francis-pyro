@@ -1,14 +1,14 @@
 {
-  "name": "generator-francis-wordpress",
-  "version": "0.1.2",
-  "description": "Deploy a Wordpress website",
+  "name": "generator-francis-pyro",
+  "version": "0.1.0",
+  "description": "Deploy a PyroCMS website",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "francisbond/generator-francis-wordpress",
+  "repository": "francisbond/generator-francis-pyro",
   "author": {
     "name": "Angus Fretwell",
     "email": "angus@francisbond.com",
-    "url": "https://github.com/angusfretwell"
+    "url": "https://github.com/francisbond"
   },
   "engines": {
     "node": ">=0.10.0"

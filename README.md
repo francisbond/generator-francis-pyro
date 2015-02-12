@@ -1,7 +1,7 @@
-generator-francis-wordpress
+generator-francis-pyro
 ===========================
 
-[Francis Bond's](http://francisbond.com) [Yeoman](http://yeoman.io) generator for deploying a [Wordpress](http://wordpress.org) website with [Gulp](http://gulpjs.com/).
+[Francis Bond's](http://francisbond.com) [Yeoman](http://yeoman.io) generator for deploying a [pyro](http://pyro.org) website with [Gulp](http://gulpjs.com/).
 
 ## Features
 
@@ -11,8 +11,8 @@ generator-francis-wordpress
 
 ## Initialization
 
-* Install: `npm install -g francisbond/generator-francis-wordpress`
-* Run: `yo francis-wordpress`
+* Install: `npm install -g francisbond/generator-francis-pyro`
+* Run: `yo francis-pyro`
 * Use `gulp deploy-init` to initalise a deployment environment
 * Run `gulp deploy` after committing changes to deploy them
 * Use `gulp db-push` and `gulp db-pull` to push and pull databases between local and remote environments
@@ -66,7 +66,7 @@ generator-francis-wordpress
 * Rerunning `gulp deploy-init` will fail, since a Dokku remote has already been created. Running `git remote remove dokku` will resolve this.
 * `gulp deploy` will sometimes fail if a newer commit has been deployed but not pushed to the repository. You can override this by running `git push origin dokku --force`.
 
-## Updating legacy Wordpress websites
+## Updating legacy pyro websites
 
 For database deployment functionality to work, the `wp-config.php` file must be updated as follows:
 
@@ -77,18 +77,18 @@ For database deployment functionality to work, the `wp-config.php` file must be 
 For example:
 
 ```
-/** Absolute path to the WordPress directory. */
+/** Absolute path to the pyro directory. */
 if ( !defined('ABSPATH') )
   define('ABSPATH', dirname(__FILE__) . '/');
 
-/** Sets up WordPress database settings. */
+/** Sets up pyro database settings. */
 require_once(ABSPATH . 'wp-config-database.php');
 
 /**
- * WordPress Database Table prefix.
+ * pyro Database Table prefix.
  *
  * You can have multiple installations in one database if you give each a unique
  * prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wp_';
+$table_prefix  = 'pyro_';
 ```
