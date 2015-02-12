@@ -1,7 +1,7 @@
 {
   "name": "generator-francis-pyro",
   "version": "0.1.0",
-  "description": "Deploy a PyroCMS website",
+  "description": "Deploy a Pyro CMS website",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "francisbond/generator-francis-pyro",
