@@ -3,7 +3,7 @@
 var yeoman = require('yeoman-generator'),
     yosay = require('yosay');
 
-var FrancispyroGenerator = yeoman.generators.Base.extend({
+var FrancisPyroGenerator = yeoman.generators.Base.extend({
   init: function() {
     this.pkg = require('../package.json');
   },
