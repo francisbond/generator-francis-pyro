@@ -15,7 +15,7 @@ if (isset($_SERVER['X_FORWARDED_HOST']) && !empty($_SERVER['X_FORWARDED_HOST']))
 switch ($hostname) {
 
   case '<%= _.slugify(slug) %>.pyro.dev':
-    $db = array(
+    $db['default'] = array(
         'hostname'    =>  'localhost',
         'username'    =>  'root',
         'password'    =>  'root',
@@ -37,7 +37,7 @@ switch ($hostname) {
     break;
 
   default:
-    $db = array(
+    $db['default'] = array(
         'hostname'    =>  getenv('hostname'),
         'username'    =>  getenv('username'),
         'password'    =>  getenv('password'),

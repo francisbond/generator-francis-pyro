@@ -68,27 +68,26 @@ generator-francis-pyro
 
 ## Updating legacy pyro websites
 
-For database deployment functionality to work, the `wp-config.php` file must be updated as follows:
+For database deployment functionality to work, the `database.php` file must be updated as follows:
 
 * Any existing database configuration should be removed
-* `wp-config-database.php` (created by the generator) should be included
+* `database-config.php` (created by the generator) should be included
 * A `table_prefix` should be set where applicable
+* /public/system/cms/config/database.php content should be replaced with the below
 
 For example:
 
 ```
-/** Absolute path to the pyro directory. */
+/** Absolute path to the Pyro directory. */
 if ( !defined('ABSPATH') )
-  define('ABSPATH', dirname(__FILE__) . '/');
+  define('ABSPATH', dirname(__FILE__) . '/../../../');
 
-/** Sets up pyro database settings. */
-require_once(ABSPATH . 'wp-config-database.php');
+/** Sets up WordPress database settings. */
+require_once(ABSPATH . 'database-config.php');
 
-/**
- * pyro Database Table prefix.
- *
- * You can have multiple installations in one database if you give each a unique
- * prefix. Only numbers, letters, and underscores please!
- */
-$table_prefix  = 'pyro_';
+// Assign the group to be used
+$active_group = 'default';
+$query_builder = TRUE;
+
+/* End of file database.php */
 ```
