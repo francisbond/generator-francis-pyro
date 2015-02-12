@@ -73,7 +73,7 @@ For database deployment functionality to work, the `database.php` file must be u
 * Any existing database configuration should be removed
 * `database-config.php` (created by the generator) should be included
 * A `table_prefix` should be set where applicable
-* /public/system/cms/config/database.php content should be replaced with the below
+* `/public/system/cms/config/database.php` content should be replaced with the below
 
 For example:
 
