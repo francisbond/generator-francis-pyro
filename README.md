@@ -82,7 +82,7 @@ For example:
 if ( !defined('ABSPATH') )
   define('ABSPATH', dirname(__FILE__) . '/../../../');
 
-/** Sets up WordPress database settings. */
+/** Sets up Pyro database settings. */
 require_once(ABSPATH . 'database-config.php');
 
 // Assign the group to be used
