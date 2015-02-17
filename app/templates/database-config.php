@@ -38,15 +38,18 @@ switch ($hostname) {
 
   default:
     $db['default'] = array(
-        'hostname'    =>  getenv('hostname'),
-        'username'    =>  getenv('username'),
-        'password'    =>  getenv('password'),
-        'database'    =>  getenv('database'),
+        'hostname'    =>  getenv('DB_HOST'),
+        'username'    =>  getenv('DB_USER'),
+        'password'    =>  getenv('DB_PASSWORD'),
+        'database'    =>  getenv('DB_NAME'),
         'dbdriver'    =>  'mysql',
-        'dbprefix'    =>  'pyro_',
+        'active_r'    =>  true,
+        'pconnect'    =>  false,
+        'db_debug'    =>  true,
+        'cache_on'    =>  false,
         'char_set'    =>  'utf8',
         'dbcollat'    =>  'utf8_unicode_ci',
-        'port'        =>  getenv('port')
+        'port'        =>  getenv('DB_PORT')
     );
 }
 
